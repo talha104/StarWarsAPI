@@ -1,10 +1,10 @@
 const filmsButton = document.getElementById("films");
-const peopleButton = document.getElementById("people");
+const starshipsButton = document.getElementById("people");
 const gallery = document.getElementById("gallery");
 
 const setActive = activeButton => {
     filmsButton.classList.remove("active");
-    peopleButton.classList.remove("active");
+    starshipsButton.classList.remove("active");
     activeButton.classList.add("active");
 } 
 
@@ -46,7 +46,7 @@ const fetchData = async (url) => {
             });
         }
 
-        else if (peopleButton.classList.contains("active")) {
+        else if (starshipsButton.classList.contains("active")) {
 
             results = data.results;
             
@@ -87,7 +87,7 @@ filmsButton.addEventListener("click", () => {
     fetchData("https://www.swapi.tech/api/films");
 })
 
-peopleButton.addEventListener("click", () => {
-    setActive(peopleButton);
+starshipsButton.addEventListener("click", () => {
+    setActive(starshipsButton);
     fetchData("https://www.swapi.tech/api/starships");
 })
