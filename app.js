@@ -1,5 +1,5 @@
 const filmsButton = document.getElementById("films");
-const starshipsButton = document.getElementById("people");
+const starshipsButton = document.getElementById("starships");
 const gallery = document.getElementById("gallery");
 
 const setActive = activeButton => {
@@ -85,9 +85,9 @@ const fetchData = async (url) => {
 filmsButton.addEventListener("click", () => {
     setActive(filmsButton);
     fetchData("https://www.swapi.tech/api/films");
-})
+});
 
 starshipsButton.addEventListener("click", () => {
     setActive(starshipsButton);
     fetchData("https://www.swapi.tech/api/starships");
-})
+});
